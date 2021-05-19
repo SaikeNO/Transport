@@ -17,6 +17,146 @@ body {
   max-width: 1440px;
 }
 
+.text-wrapper {
+  width: 440px;
+}
+
+.text-wrapper--about {
+  width: 450px;
+}
+
+.small-title {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.small-title--about {
+  color: #0666f6;
+}
+
+.title {
+  padding: 24px 0;
+  font-size: 72px;
+  color: #fff;
+  font-family: "Black Ops One";
+  line-height: 80px;
+  letter-spacing: -3px;
+}
+
+.title--about {
+  color: #4d5163;
+  letter-spacing: -2px;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  margin-bottom: 33px;
+}
+
+.description--about {
+  color: #4d5163;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.description--about-lighter {
+  color: rgba(77, 81, 99, 0.5);
+  margin-bottom: 41px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 638px;
+  height: 530px;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 530px;
+  height: 530px;
+  background-color: #302f4a;
+  border-radius: 50%;
+}
+
+.img-wrapper img {
+  position: absolute;
+}
+
+.img-wrapper__center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 314px;
+}
+
+.img-wrapper__szlaczek {
+  right: 0;
+  bottom: 40px;
+}
+
+.img-wrapper__second {
+  left: 0;
+  bottom: 53px;
+}
+
+.img-wrapper__third {
+  right: 56px;
+  top: 55px;
+}
+
+.img-wrapper__first {
+  left: 41px;
+  top: 55px;
+}
+
+.img-wrapper--about {
+  width: 575px;
+  height: 568px;
+}
+
+.img-wrapper--about .img-wrapper__szlaczek {
+  right: auto;
+  left: 0;
+  bottom: 0;
+}
+
+.img-wrapper--about .img-wrapper__first {
+  left: auto;
+  right: 0;
+  top: 55px;
+}
+
+.img-wrapper--about .img-wrapper__second {
+  left: auto;
+  top: 43px;
+  right: 32;
+  bottom: 0;
+}
+
+.img-wrapper--about .img-wrapper__third {
+  right: 35px;
+  top: auto;
+  bottom: 13px;
+}
+
+.img-wrapper--about::before {
+  background-color: #e6f0ff;
+}
+
 .primary-button {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -115,8 +255,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 148px 0 0 50px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .header .slice {
@@ -133,83 +273,66 @@ body {
   padding: 0 50px;
 }
 
-.header .slice__text-wrapper {
-  width: 440px;
+.about {
+  margin-top: 164px;
+  margin-bottom: 190px;
 }
 
-.header .slice__img-wrapper {
-  position: relative;
-  width: 638px;
-  height: 530px;
+.about .container {
+  padding: 0 20px;
+  max-width: calc(1440px - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header .slice__img-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 530px;
-  height: 530px;
-  background-color: #302f4a;
-  border-radius: 50%;
+.numbers {
+  margin-bottom: 180px;
+  color: #4d5163;
 }
 
-.header .slice__img-wrapper img {
-  position: absolute;
+.numbers__title {
+  text-align: center;
+  font-family: "Black ops one";
+  color: #4d5163;
+  letter-spacing: -1px;
+  font-size: 40px;
+  max-width: 670px;
+  line-height: 48px;
+  margin: 0 auto 47px;
 }
 
-.header .slice__img-wrapper__tir {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 314px;
+.numbers__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 200px;
 }
 
-.header .slice__img-wrapper__szlaczek {
-  right: 0;
-  bottom: 40px;
+.numbers__elem span {
+  display: block;
+  text-align: center;
 }
 
-.header .slice__img-wrapper__literki {
-  left: 0;
-  bottom: 53px;
+.numbers__main {
+  font-family: "Black ops one";
+  font-size: 56px;
 }
 
-.header .slice__img-wrapper__paczka {
-  right: 56px;
-  top: 55px;
+.numbers__subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0 14px;
 }
 
-.header .slice__img-wrapper__tir2 {
-  left: 41px;
-  top: 55px;
-}
-
-.header .slice__company {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.header .slice__title {
-  padding: 24px 0;
-  font-size: 72px;
-  color: #fff;
-  font-family: "Black Ops One";
-  line-height: 80px;
-  letter-spacing: -3px;
-}
-
-.header .slice__description {
-  font-size: 16px;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 400;
-  margin-bottom: 33px;
+.numbers__description {
+  font-size: 14px;
+  color: rgba(77, 81, 99, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
