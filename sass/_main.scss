@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.primary-button {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Black Ops One";
+  font-size: 14px;
+  cursor: pointer;
+  &--dark {
+    padding: 16px 35px 14px;
+    background-color: transparent;
+  }
+  &--light {
+    padding: 16px 35px 14px;
+    background-color: #0666f6;
+    border: none;
+  }
+}

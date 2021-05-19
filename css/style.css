@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.primary-button {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Black Ops One";
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-button--dark {
+  padding: 16px 35px 14px;
+  background-color: transparent;
+}
+
+.primary-button--light {
+  padding: 16px 35px 14px;
+  background-color: #0666f6;
+  border: none;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+  color: #fff;
+}
+
+.nav__logo {
+  width: 81px;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+}
+
+.nav__list-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #25243a;
+  height: 880px;
+}
+
+.header .slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.header .slider__left, .header .slider__right {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 48px;
+  width: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1111;
+}
+
+.header .slider__right {
+  left: auto;
+  right: 0;
+}
+
+.header .slice-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 148px 0 0 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header .slice {
+  -ms-flex-preferred-size: 1350px;
+      flex-basis: 1350px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header .slice__text-wrapper {
+  width: 440px;
+}
+
+.header .slice__img-wrapper {
+  position: relative;
+  width: 638px;
+  height: 530px;
+}
+
+.header .slice__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 530px;
+  height: 530px;
+  background-color: #302f4a;
+  border-radius: 50%;
+}
+
+.header .slice__img-wrapper img {
+  position: absolute;
+}
+
+.header .slice__img-wrapper__tir {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 314px;
+}
+
+.header .slice__img-wrapper__szlaczek {
+  right: 0;
+  bottom: 40px;
+}
+
+.header .slice__img-wrapper__literki {
+  left: 0;
+  bottom: 53px;
+}
+
+.header .slice__img-wrapper__paczka {
+  right: 56px;
+  top: 55px;
+}
+
+.header .slice__img-wrapper__tir2 {
+  left: 41px;
+  top: 55px;
+}
+
+.header .slice__company {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.header .slice__title {
+  padding: 24px 0;
+  font-size: 72px;
+  color: #fff;
+  font-family: "Black Ops One";
+  line-height: 80px;
+  letter-spacing: -3px;
+}
+
+.header .slice__description {
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  margin-bottom: 33px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  color: #fff;
+  &__logo {
+    width: 81px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
+  &__list-item {
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
