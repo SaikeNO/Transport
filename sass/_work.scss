@@ -1,0 +1,65 @@
+.work {
+  text-align: center;
+  &__small-title {
+    font-size: 16px;
+    color: #0666f6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  &__title {
+    font-family: "Black ops one";
+    font-size: 56px;
+    color: #4d5163;
+    letter-spacing: -2px;
+    padding: 21px 0 11px;
+  }
+  &__description {
+    margin: 0 auto;
+    max-width: 570px;
+    font-size: 16px;
+    line-height: 32px;
+    color: rgba($color: #4d5163, $alpha: 0.5);
+    margin-bottom: 70px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+  &__item {
+    text-align: left;
+    margin-right: 30px;
+    flex-basis: 25%;
+    &__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 112px;
+      width: 112px;
+      border-radius: 50%;
+      background-color: #ed7171;
+      font-size: 72px;
+      color: #fff;
+      font-family: "black ops one";
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 24px 0 19px;
+    }
+    &__description {
+      font-size: 16px;
+      color: rgba($color: #4d5163, $alpha: 0.5);
+      line-height: 32px;
+    }
+  }
+  &__footer {
+    color: rgba($color: #4d5163, $alpha: 0.5);
+    margin-bottom: 106px;
+    a {
+      text-decoration: none;
+      color: #4d5163;
+    }
+  }
+}
