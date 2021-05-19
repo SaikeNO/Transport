@@ -1,0 +1,26 @@
+.started {
+  background-color: #25243a;
+  padding: 0 24px 170px;
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 106px;
+    max-width: 1392px;
+    min-height: 400px;
+    background-color: #0666f6;
+    border-radius: 32px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+    button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

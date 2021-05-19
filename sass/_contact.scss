@@ -1,0 +1,31 @@
+.contact {
+  background-color: #25243a;
+  padding-bottom: 160px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__map-wrapper {
+    position: relative;
+  }
+  &__point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+  &__map {
+    width: 570px;
+  }
+  &__list-item a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+    img {
+      margin-right: 22px;
+    }
+  }
+}

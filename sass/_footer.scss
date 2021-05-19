@@ -1,0 +1,34 @@
+.footer {
+  background-color: #25243a;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.16);
+  }
+  &__socials {
+    img {
+      margin-right: 8px;
+    }
+  }
+  &__list {
+    margin-top: 16px;
+    a {
+      text-decoration: none;
+      color: #fff;
+      line-height: 32px;
+    }
+  }
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 0 53px;
+    a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 74px;
+    }
+  }
+}
