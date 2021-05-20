@@ -569,6 +569,54 @@ body {
   z-index: 2;
 }
 
+.rating {
+  background-color: #25243a;
+  padding: 93px 0 195px;
+  color: #fff;
+}
+
+.rating .container {
+  max-width: 770px;
+  padding: 0;
+}
+
+.rating__quote {
+  font-size: 72px;
+  letter-spacing: -3px;
+  font-family: "black ops one";
+}
+
+.rating__quotation {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "black ops one";
+  letter-spacing: -1px;
+  margin-bottom: 45px;
+}
+
+.rating__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rating__person img {
+  margin-right: 20px;
+}
+
+.rating__person__name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.rating__person__description {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .price {
   background-color: #25243a;
   padding-bottom: 152px;

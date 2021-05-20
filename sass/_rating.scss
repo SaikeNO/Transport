@@ -1,0 +1,36 @@
+.rating {
+  background-color: #25243a;
+  padding: 93px 0 195px;
+  color: #fff;
+  .container {
+    max-width: 770px;
+    padding: 0;
+  }
+  &__quote {
+    font-size: 72px;
+    letter-spacing: -3px;
+    font-family: "black ops one";
+  }
+  &__quotation {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "black ops one";
+    letter-spacing: -1px;
+    margin-bottom: 45px;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 20px;
+    }
+    &__name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &__description {
+      color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+}
