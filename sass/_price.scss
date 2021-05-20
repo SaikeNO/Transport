@@ -1,0 +1,69 @@
+.price {
+  background-color: #25243a;
+  padding-bottom: 152px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img-wrapper {
+    position: relative;
+    width: 570px;
+    height: 622px;
+    background-image: url("../assets/svg/szlaczek 5.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #383759;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background-color: #383759;
+    }
+  }
+  &__size {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 506px;
+    height: 384px;
+    border-radius: 32px;
+    z-index: 1;
+  }
+  &__title {
+    padding: 40px 50px;
+    font-size: 24px;
+  }
+  &__boxes-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #e3eeff;
+    padding: 40px 0 16px;
+    margin: 0 8px 32px;
+    border-radius: 16px;
+  }
+  &__description {
+    margin-top: 11px;
+    text-align: center;
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

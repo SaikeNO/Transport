@@ -1,27 +1,5 @@
 .work {
   text-align: center;
-  &__small-title {
-    font-size: 16px;
-    color: #0666f6;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-  &__title {
-    font-family: "Black ops one";
-    font-size: 56px;
-    color: #4d5163;
-    letter-spacing: -2px;
-    padding: 21px 0 11px;
-  }
-  &__description {
-    margin: 0 auto;
-    max-width: 570px;
-    font-size: 16px;
-    line-height: 32px;
-    color: rgba($color: #4d5163, $alpha: 0.5);
-    margin-bottom: 70px;
-  }
   &__list {
     display: flex;
     justify-content: space-between;

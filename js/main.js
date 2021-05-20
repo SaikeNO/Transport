@@ -1,15 +1,10 @@
 // HEADER SLIDER
-const slider = () => {
-  const slider = document.getElementById("header-slider");
-  const leftArrow = document.getElementById("header-arrow-left");
-  const rightArrow = document.getElementById("header-arrow-right");
-  const slices = [...document.querySelectorAll(".slice")];
+const slider = (slider, leftArrow, rightArrow, slices, elementsInView) => {
   const sliceWidth = slices[0].clientWidth;
   let translate = 0;
   const time = 4000;
-
   const slideRight = () => {
-    if (translate === -sliceWidth * (slices.length - 1)) {
+    if (translate === -sliceWidth * (slices.length - elementsInView)) {
       translate = sliceWidth;
     }
     slider.style.transform = `translate(${translate - sliceWidth}px)`;
@@ -44,6 +39,7 @@ const slider = () => {
   });
 };
 
+// COUNTER
 const counter = () => {
   const clientNumberElem = document.getElementById("client-number");
   const ratePercentElem = document.getElementById("rate-percent");
@@ -81,5 +77,38 @@ const counter = () => {
   });
 };
 
-slider();
+// FAQ
+const handleFAQ = () => {
+  const questions = [...document.querySelectorAll(".faq__question")];
+  const paragraphElement = document.createElement("p");
+
+  const questionContent = `The four means of transportation are airways, roadways, railways,
+  and waterways. The means of transport is a term used to describe the
+  different types of transportation systems used to take goods or
+  persons from one place to another. Other means include cable
+  transport and pipelines.`;
+
+  paragraphElement.classList.add("faq__question__content");
+  paragraphElement.textContent = questionContent;
+  questions[0].appendChild(paragraphElement);
+  questions.forEach((question) => {
+    question.addEventListener("click", function () {
+      this.appendChild(paragraphElement);
+    });
+  });
+};
+
+const headerSlider = document.getElementById("header-slider");
+const headerLeftArrow = document.getElementById("header-arrow-left");
+const headerRightArrow = document.getElementById("header-arrow-right");
+const headerSlices = [...document.querySelectorAll(".header__slice")];
+
+const faqSlider = document.getElementById("faq-slider");
+const faqLeftArrow = document.getElementById("faq-arrow-left");
+const faqRightArrow = document.getElementById("faq-arrow-right");
+const faqSlices = [...document.querySelectorAll(".faq__slice")];
+
+slider(headerSlider, headerLeftArrow, headerRightArrow, headerSlices, 1);
+slider(faqSlider, faqLeftArrow, faqRightArrow, faqSlices, 4);
 counter();
+handleFAQ();

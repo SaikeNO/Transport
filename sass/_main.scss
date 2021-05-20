@@ -23,7 +23,7 @@ body {
   &--about {
     width: 450px;
   }
-  &--service {
+  &--bigger {
     width: 490px;
   }
 }
@@ -33,6 +33,10 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+  &--centered {
+    color: #0666f6;
+    text-align: center;
+  }
   &--about {
     color: #0666f6;
   }
@@ -44,17 +48,28 @@ body {
   font-family: "Black Ops One";
   line-height: 80px;
   letter-spacing: -3px;
+  &--centered {
+    font-size: 56px;
+    color: #4d5163;
+    letter-spacing: -2px;
+    padding: 21px 0 11px;
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 64px;
+  }
+  &--left {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+  }
   &--about {
     color: #4d5163;
     letter-spacing: -2px;
     font-size: 56px;
     line-height: 64px;
   }
-  &--service {
-    font-size: 56px;
-    line-height: 64px;
-    letter-spacing: -2px;
-  }
+
   &--started {
     padding: 21px 0 11px;
     font-size: 56px;
@@ -76,7 +91,7 @@ body {
     color: rgba(77, 81, 99, 0.5);
     margin-bottom: 41px;
   }
-  &--service {
+  &--left {
     color: #fff;
     font-size: 20px;
     margin-bottom: 18px;
@@ -87,6 +102,13 @@ body {
   }
   &--footer {
     margin-bottom: 0;
+  }
+  &--centered {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    text-align: center;
+    max-width: 570px;
+    color: rgba($color: #4d5163, $alpha: 0.5);
   }
 }
 .img-wrapper {
