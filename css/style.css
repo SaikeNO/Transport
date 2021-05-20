@@ -10,6 +10,7 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -66,7 +67,7 @@ body {
   letter-spacing: -2px;
   padding: 21px 0 11px;
   text-align: center;
-  max-width: 520px;
+  max-width: 650px;
   margin: 0 auto;
   line-height: 64px;
 }
@@ -379,7 +380,7 @@ body {
 }
 
 .about {
-  margin-top: 164px;
+  padding-top: 164px;
   margin-bottom: 190px;
 }
 
@@ -567,6 +568,121 @@ body {
 .started .banner button {
   position: relative;
   z-index: 2;
+}
+
+.team {
+  padding: 97px 0 176px;
+}
+
+.team__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.team__img-wrapper {
+  position: relative;
+}
+
+.team__img-wrapper img {
+  position: relative;
+  display: block;
+}
+
+.team__img-wrapper::after, .team__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  height: 100%;
+  width: 100%;
+  background-color: #0666f6;
+  border-radius: 24px;
+  z-index: -1;
+}
+
+.team__img-wrapper::before {
+  left: 16px;
+  background-color: #448fff;
+}
+
+.team__img-bg {
+  position: relative;
+}
+
+.team__img-bg::after, .team__img-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  height: 100%;
+  width: 100%;
+  background-color: #9ac2ff;
+  border-radius: 24px;
+  z-index: -2;
+}
+
+.team__img-bg::before {
+  left: 32px;
+  background-color: #c7deff;
+  z-index: -3;
+}
+
+.team__content {
+  color: #4d5163;
+  margin-left: 78px;
+}
+
+.team__title {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.team__description {
+  padding: 40px 0 30px;
+  line-height: 32px;
+  color: rgba(77, 81, 99, 0.5);
+}
+
+.team__name {
+  font-size: 20px;
+}
+
+.team__workplace {
+  color: rgba(77, 81, 99, 0.5);
+  margin: 10px 0 21px;
+}
+
+.team__left-arrow, .team__right-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(6, 102, 246, 0.3);
+  background-color: transparent;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.team__slider {
+  overflow: hidden;
+}
+
+.team__slider--name {
+  width: 200px;
+}
+
+.team__slice-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.team__slice {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 700px;
 }
 
 .rating {

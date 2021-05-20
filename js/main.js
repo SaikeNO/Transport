@@ -108,7 +108,21 @@ const faqLeftArrow = document.getElementById("faq-arrow-left");
 const faqRightArrow = document.getElementById("faq-arrow-right");
 const faqSlices = [...document.querySelectorAll(".faq__slice")];
 
+const teamSlider1 = document.getElementById("team-slider1");
+const teamSlider2 = document.getElementById("team-slider2");
+const teamLeftArrow = document.getElementById("team-arrow-left");
+const teamRightArrow = document.getElementById("team-arrow-right");
+const teamSlices1 = [
+  ...document.querySelectorAll("#team-slider1 .team__slice"),
+];
+const teamSlices2 = [
+  ...document.querySelectorAll("#team-slider2 .team__slice"),
+];
+
 slider(headerSlider, headerLeftArrow, headerRightArrow, headerSlices, 1);
 slider(faqSlider, faqLeftArrow, faqRightArrow, faqSlices, 4);
+slider(teamSlider1, teamLeftArrow, teamRightArrow, teamSlices1, 1);
+slider(teamSlider2, teamLeftArrow, teamRightArrow, teamSlices2, 1);
 counter();
 handleFAQ();
+console.log(typeof []);
