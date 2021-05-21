@@ -486,6 +486,13 @@ body {
   margin-right: 30px;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.work__item:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .work__item__number {
