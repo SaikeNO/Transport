@@ -3,6 +3,7 @@ const slider = (slider, leftArrow, rightArrow, slices, elementsInView) => {
   const sliceWidth = slices[0].clientWidth;
   let translate = 0;
   const time = 4000;
+
   const slideRight = () => {
     if (translate === -sliceWidth * (slices.length - elementsInView)) {
       translate = sliceWidth;
@@ -10,6 +11,7 @@ const slider = (slider, leftArrow, rightArrow, slices, elementsInView) => {
     slider.style.transform = `translate(${translate - sliceWidth}px)`;
     translate -= sliceWidth;
   };
+
   const slideLeft = () => {
     if (translate === 0) {
       translate = -sliceWidth * slices.length;
@@ -18,24 +20,18 @@ const slider = (slider, leftArrow, rightArrow, slices, elementsInView) => {
     translate += sliceWidth;
   };
 
-  let indexInterval = setInterval(() => {
-    slideRight();
-  }, time);
+  let indexInterval = setInterval(slideRight, time);
 
   rightArrow.addEventListener("click", () => {
     clearInterval(indexInterval);
     slideRight();
-    indexInterval = setInterval(() => {
-      slideRight();
-    }, time);
+    indexInterval = setInterval(slideRight, time);
   });
 
   leftArrow.addEventListener("click", () => {
     clearInterval(indexInterval);
     slideLeft();
-    indexInterval = setInterval(() => {
-      slideRight();
-    }, time);
+    indexInterval = setInterval(slideRight, time);
   });
 };
 
@@ -125,4 +121,3 @@ slider(teamSlider1, teamLeftArrow, teamRightArrow, teamSlices1, 1);
 slider(teamSlider2, teamLeftArrow, teamRightArrow, teamSlices2, 1);
 counter();
 handleFAQ();
-console.log(typeof []);

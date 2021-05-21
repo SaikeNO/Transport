@@ -99,6 +99,14 @@ body {
   margin-bottom: 33px;
 }
 
+.description--centered {
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+  max-width: 570px;
+  color: rgba(77, 81, 99, 0.5);
+}
+
 .description--about {
   color: #4d5163;
   font-size: 20px;
@@ -123,14 +131,6 @@ body {
 
 .description--footer {
   margin-bottom: 0;
-}
-
-.description--centered {
-  margin: 0 auto;
-  margin-bottom: 70px;
-  text-align: center;
-  max-width: 570px;
-  color: rgba(77, 81, 99, 0.5);
 }
 
 .img-wrapper {
@@ -267,10 +267,19 @@ body {
   font-family: "Black Ops One";
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .primary-button--dark {
+  display: inline-block;
   background-color: transparent;
+  text-decoration: none;
+}
+
+.primary-button--dark:hover {
+  background-color: #fff;
+  color: #4d5163;
 }
 
 .primary-button--light {
@@ -278,9 +287,17 @@ body {
   border: none;
 }
 
+.primary-button--light:hover {
+  background-color: #0048b4;
+}
+
 .primary-button--red {
   background-color: #ed7171;
   border: none;
+}
+
+.primary-button--red:hover {
+  background-color: #ff5858;
 }
 
 .nav {
@@ -312,6 +329,14 @@ body {
 .nav__list-item a {
   color: #fff;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nav__list-item a:hover {
+  border-color: #fff;
 }
 
 .header {
@@ -675,8 +700,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .team__slice {
@@ -829,7 +854,7 @@ body {
 }
 
 .faq {
-  padding-bottom: 191px;
+  padding: 0 24px 191px;
   background-color: #25243a;
   color: #4d5163;
 }
