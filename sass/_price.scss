@@ -66,4 +66,12 @@
     display: flex;
     justify-content: center;
   }
+  &__box {
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 10px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

@@ -1,7 +1,7 @@
 .header {
   background-color: #25243a;
   height: 880px;
-  .slider {
+  &__slider {
     position: relative;
     overflow: hidden;
     max-width: 1440px;
@@ -29,13 +29,13 @@
       right: 0;
     }
   }
-  .slice-wrapper {
+  &__slice-wrapper {
     display: flex;
     padding-top: 148px;
     transition: 0.6s;
   }
   &__slice {
-    flex-basis: 1440px;
+    width: 100%;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
