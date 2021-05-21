@@ -35,6 +35,59 @@ const slider = (slider, leftArrow, rightArrow, slices, elementsInView) => {
   });
 };
 
+const teamSlider = (slider, leftArrow, rightArrow, slices, img) => {
+  const sliceWidth = slices[0].clientWidth;
+  let translate = 0;
+  let imgIndex = 0;
+  const time = 4000;
+  const imgPaths = [
+    "assets/images/kierowca.png",
+    "assets/images/kierowca2.png",
+    "assets/images/kierownik.png",
+  ];
+  img.src = imgPaths[0];
+
+  const slideRight = () => {
+    if (translate === -sliceWidth * (slices.length - 1)) {
+      translate = sliceWidth;
+    }
+    imgIndex++;
+    if (imgIndex === imgPaths.length) {
+      imgIndex = 0;
+    }
+    img.src = imgPaths[imgIndex];
+    slider.style.transform = `translate(${translate - sliceWidth}px)`;
+    translate -= sliceWidth;
+  };
+
+  const slideLeft = () => {
+    if (translate === 0) {
+      translate = -sliceWidth * slices.length;
+    }
+    if (imgIndex === 0) {
+      imgIndex = imgPaths.length;
+    }
+    imgIndex--;
+    img.src = imgPaths[imgIndex];
+    slider.style.transform = `translate(${translate + sliceWidth}px)`;
+    translate += sliceWidth;
+  };
+
+  let indexInterval = setInterval(slideRight, time);
+
+  rightArrow.addEventListener("click", () => {
+    clearInterval(indexInterval);
+    slideRight();
+    indexInterval = setInterval(slideRight, time);
+  });
+
+  leftArrow.addEventListener("click", () => {
+    clearInterval(indexInterval);
+    slideLeft();
+    indexInterval = setInterval(slideRight, time);
+  });
+};
+
 // COUNTER
 const counter = () => {
   const clientNumberElem = document.getElementById("client-number");
@@ -114,10 +167,11 @@ const teamSlices1 = [
 const teamSlices2 = [
   ...document.querySelectorAll("#team-slider2 .team__slice"),
 ];
+const img = document.getElementById("team-img");
 
 slider(headerSlider, headerLeftArrow, headerRightArrow, headerSlices, 1);
 slider(faqSlider, faqLeftArrow, faqRightArrow, faqSlices, 4);
-slider(teamSlider1, teamLeftArrow, teamRightArrow, teamSlices1, 1);
-slider(teamSlider2, teamLeftArrow, teamRightArrow, teamSlices2, 1);
+teamSlider(teamSlider1, teamLeftArrow, teamRightArrow, teamSlices1, img);
+teamSlider(teamSlider2, teamLeftArrow, teamRightArrow, teamSlices2, img);
 counter();
 handleFAQ();
